@@ -127,3 +127,21 @@ let songs = [
       "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/53/0e/d0/530ed031-316d-a32b-d603-c11af9ad235d/20UMGIM28169.rgb.jpg/100x100bb.jpg",
   },
 ];
+let playList= document.getElementById("playlist")
+//loop through array
+for (let i = songs.length - 1; i >= 0; i--) {
+    console.log(songs[i])
+    console.log(playList)
+    playList.innerHTML+= `<div class="song">
+    <h3>${songs[i].title}</h3>
+    <p>${songs[i].artist}</p>
+    <p>${songs[i].duration}</p>
+    ${songs[i].liked ? '<p>⭐ Favorite</p>' : ''}
+    
+    
+    
+    </div>`
+}
+//For each song, create a new <div class="song">
+
+
